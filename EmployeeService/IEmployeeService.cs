@@ -12,13 +12,11 @@ namespace EmployeeService
         [OperationContract]
         [WebInvoke(Method = "GET", UriTemplate = "GetEmployeeById?id={id}",
             ResponseFormat = WebMessageFormat.Json,  BodyStyle = WebMessageBodyStyle.Bare)]
-        bool GetEmployeeById(int id);
+        string GetEmployeeById(int id);
 
         [OperationContract]
         [WebInvoke(Method = "PUT", UriTemplate = "EnableEmployee?id={id}", 
             BodyStyle = WebMessageBodyStyle.WrappedRequest)]
-        void EnableEmployee(int id, int enable);
+        void EnableEmployee(int id);
     }
-
-	
 }

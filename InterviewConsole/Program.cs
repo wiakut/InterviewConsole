@@ -19,7 +19,7 @@ namespace InterviewConsole
         {
             var dt = new DataTable();
 
-			using (var connection = new SqlConnection("Data Source=(local);Initial Catalog=Test;User ID=sa;Password=pass@word1; "))
+			using (var connection = new SqlConnection("Server=localhost;Database=try;Integrated Security=True;"))
             {
                 connection.Open();
 
